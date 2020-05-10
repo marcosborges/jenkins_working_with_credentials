@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function create_credentials_by_xml_filename() {
+function update_credentials_by_xml_filename() {
     echo """<org.jenkinsci.plugins.plaincredentials.impl.FileCredentialsImpl plugin=\"plain-credentials@1.4\">
    <scope>GLOBAL</scope>
    <id>${JENKINS_CREDENTIAL_NAME}_FILE</id>
@@ -11,8 +11,9 @@ function create_credentials_by_xml_filename() {
     java \
         -jar jenkins-cli.jar \
         -s $JENKINS_URL \
-        create-credentials-by-xml \
+        update-credentials-by-xml \
         $JENKINS_CREDENTIAL_STORE \
-        $JENKINS_CREDENTIAL_DOMAIN
+        $JENKINS_CREDENTIAL_DOMAIN \
+        ${JENKINS_CREDENTIAL_NAME}_FILE
 }
 
