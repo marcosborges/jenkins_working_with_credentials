@@ -46,7 +46,18 @@ Pelo jenkins-cli você consegue criar, atualizar, excluir, listar e obter creden
 
 ## Testando
 
-Para testar o fluxo de criação, atualização, listagem, detalhe e exclusão ajuste as os valores dos `export`  que estão no arquivo `jenkins_cli.sh` e o execute.
+Para testar o fluxo de criação, atualização, listagem, detalhe e exclusão ajuste os valores dos `export`  que estão no arquivo `jenkins_cli.sh` e o execute.
+
+```bash
+export JENKINS_URL="http://localhost:8080"
+export JENKINS_USER_ID="marcos"
+export JENKINS_API_TOKEN="11a91767b5390bd10f078a981ed8fa6521"
+export JENKINS_CREDENTIAL_NAME="TEST"
+export JENKINS_CREDENTIAL_FOLDER_NAME="FOLDER_A"
+export JENKINS_CREDENTIAL_STORE="system::system::jenkins"
+export JENKINS_CREDENTIAL_FOLDER_STORE="folder::item::/${JENKINS_CREDENTIAL_FOLDER_NAME}"
+export JENKINS_CREDENTIAL_DOMAIN="(global)"
+```
 
 ```bash
 ./jenkins_cli.sh
