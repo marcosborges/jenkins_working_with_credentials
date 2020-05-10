@@ -1,10 +1,10 @@
-# Jenkins Credentials CLI
+# Credentials - Jenkins CLI
 
 Nessa pasta você encontra uma variedade de exemplos de utilização do **jenkins-cli** para trabalhar com credenciais. 
 
-Pelo jenkins-cli você consegue criar, atualizar, excluir, listar e obter credenciais global ou organizada dentro de uma pasta. 
+Pelo jenkins-cli você consegue criar, atualizar, excluir, listar e obter credenciais global ou organizada dentro de uma pasta.
 
-É importante salientar que por questão de segurança ao obter uma determinada credencial o valor desta não é exibido. Ele aparece como `<secret-redacted/>`.
+É importante salientar que ***por questão de segurança*** ao obter uma determinada credencial ***o valor*** desta ***não é exibido***. Ele aparece como `<secret-redacted/>`.
 
 ---
 
@@ -80,5 +80,7 @@ java -jar ./jenkins-cli.jar -s http://YOUR_JENKINS_HOSTNAME -auth @jenkins_secre
 
 ### Autenticação direto por usuário e senha
 ```bash
-echo '' > jenkins_secret
 java -jar ./jenkins-cli.jar -s http://YOUR_JENKINS_HOSTNAME -auth "YOUR_USERNAME:YOUR_API_TOKEN" help
+```
+
+---
