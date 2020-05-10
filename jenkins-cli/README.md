@@ -4,7 +4,7 @@ Nessa pasta você encontra uma variedade de exemplos de utilização do **jenkin
 
 Pelo jenkins-cli você consegue criar, atualizar, excluir, listar e obter credenciais global ou organizada dentro de uma pasta.
 
-É importante salientar que ***por questão de segurança*** ao obter uma determinada credencial ***o valor*** desta ***não é exibido***. Ele aparece como `<secret-redacted/>`.
+É ***importante*** salientar que ***por questão de segurança*** ao obter uma determinada credencial ***o valor*** desta ***não é exibido***. Ele aparece como `<secret-redacted/>`.
 
 ---
 
