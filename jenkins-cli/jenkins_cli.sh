@@ -122,8 +122,8 @@ folder_update_credentials_by_xml_string
 echo -e "\n\n# -------LISTANDO CREDENCIAIS SOB PASTA--------#"
 
 echo "[*] Listando a credencial do tipo texto na pasta FOLDER_A"
-source jenkins_cli_folder_list_credentials_string.sh
-folder_list_credentials_string
+source jenkins_cli_folder_list_credentials.sh
+folder_list_credentials
 
 echo -e "\n\n# --------OBTENDO CREDENCIAL SOB PASTA---------#"
 

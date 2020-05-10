@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function folder_list_credentials_string() {
+function folder_list_credentials() {
     java \
         -jar jenkins-cli.jar \
         -s $JENKINS_URL \
