@@ -75,10 +75,10 @@ Acesse o jenkins, clique em seu nome do cabeçalho, depois clique em configurar 
 ### Autenticação por arquivo
 ```bash
 echo 'YOUR_USERNAME:YOUR_API_TOKEN' > jenkins_secret
-java -jar ./jenkins-cli.jar -s http://YOUR_JENKINS_HOSTNAME -auth @jenkins_secret who-am-i
+java -jar ./jenkins-cli.jar -s http://YOUR_JENKINS_HOSTNAME -auth @jenkins_secret help
 ```
 
-### Autenticação por arquivo
+### Autenticação direto por usuário e senha
 ```bash
 echo '' > jenkins_secret
 java -jar ./jenkins-cli.jar -s http://YOUR_JENKINS_HOSTNAME -auth "YOUR_USERNAME:YOUR_API_TOKEN" help
