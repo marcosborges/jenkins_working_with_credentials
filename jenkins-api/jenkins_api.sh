@@ -18,8 +18,6 @@ export JENKINS_CREDENTIAL_STORE="store/system/domain/_"
 export JENKINS_CREDENTIAL_FOLDER_STORE="store/${JENKINS_CREDENTIAL_FOLDER_NAME}/domain/_"
 export JENKINS_CREDENTIAL_DOMAIN="(global)"
 
-#source jenkins-cli-help.sh
-#help
 
 echo "
 ###################################################################
@@ -59,29 +57,28 @@ update_credentials_by_xml_basic_ssh_user_private_key
 #
 echo -e "\n\n# ---------------LISTAR CREDENCIAIS-----------------#"
 
-
 echo "[*] Listando todas as credenciais cadastradas"
 source jenkins_api_list_credentials.sh
 list_credentials
 
-#echo -e "\n\n# ---------------OBTER CREDENCIAL GLOBAL-----------------#"
-#
-#echo "[*] Obtendo a credencial do tipo texto como xml"
-#source jenkins_api_get_credentials_as_xml_string.sh
-#get_credentials_as_xml_string
-#echo "---"
-#echo "[*] Obtendo a credencial do tipo usuário e senha como xml"
-#source jenkins_api_get_credentials_as_xml_username_password.sh
-#get_credentials_as_xml_username_password
-#echo "---"
-#echo "[*] Obtendo a credencial do tipo arquivo como xml"
-#source jenkins_api_get_credentials_as_xml_filename.sh
-#get_credentials_as_xml_filename
-#echo "---"
-#echo "[*] Obtendo a credencial do tipo chave privada ssh como xml"
-#source jenkins_api_get_credentials_as_xml_basic_ssh_user_private_key.sh
-#get_credentials_as_xml_basic_ssh_user_private_key
-#echo "---"
+echo -e "\n\n# ---------------OBTER CREDENCIAL GLOBAL-----------------#"
+
+echo "[*] Obtendo a credencial do tipo texto como xml"
+source jenkins_api_get_credentials_string.sh
+get_credentials_string
+echo "---"
+echo "[*] Obtendo a credencial do tipo usuário e senha como xml"
+source jenkins_api_get_credentials_username_password.sh
+get_credentials_username_password
+echo "---"
+echo "[*] Obtendo a credencial do tipo arquivo como xml"
+source jenkins_api_get_credentials_filename.sh
+get_credentials_filename
+echo "---"
+echo "[*] Obtendo a credencial do tipo chave privada ssh como xml"
+source jenkins_api_get_credentials_basic_ssh_user_private_key.sh
+get_credentials_basic_ssh_user_private_key
+echo "---"
 
 echo -e "\n\n# ---------------EXCLUIR CREDENCIAL GLOBAL-----------------#"
 
