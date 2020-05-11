@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function create_credentials_by_xml_string() {
+function update_credentials_by_xml_string() {
     
     #CSRF Protection
     COOKIEJAR="$(mktemp)"
@@ -20,5 +20,5 @@ function create_credentials_by_xml_string() {
         -H $CRUMB \
         -H 'content-type:application/xml' \
         -d @credential_string.xml \
-        "$JENKINS_URL/credentials/${JENKINS_CREDENTIAL_STORE}/createCredentials"
+        "$JENKINS_URL/credentials/${JENKINS_CREDENTIAL_STORE}/credential/${JENKINS_CREDENTIAL_NAME}_STRING/config.xml"
 }

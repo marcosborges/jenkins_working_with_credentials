@@ -10,11 +10,12 @@ export JENKINS_URL="http://localhost:8080"
 export JENKINS_USER_ID="marcos"
 export JENKINS_API_TOKEN="11a91767b5390bd10f078a981ed8fa6521"
 
+
 #(STORE=Provider::Resolver::ContextPath)
-export JENKINS_CREDENTIAL_NAME="TEST"
-export JENKINS_CREDENTIAL_FOLDER_NAME="FOLDER_A"
-export JENKINS_CREDENTIAL_STORE="system::system::jenkins"
-export JENKINS_CREDENTIAL_FOLDER_STORE="folder::item::/${JENKINS_CREDENTIAL_FOLDER_NAME}"
+export JENKINS_CREDENTIAL_NAME="TEST_API"
+export JENKINS_CREDENTIAL_FOLDER_NAME="folder"
+export JENKINS_CREDENTIAL_STORE="store/system/domain/_"
+export JENKINS_CREDENTIAL_FOLDER_STORE="store/${JENKINS_CREDENTIAL_FOLDER_NAME}/domain/_"
 export JENKINS_CREDENTIAL_DOMAIN="(global)"
 
 #source jenkins-cli-help.sh
@@ -31,38 +32,38 @@ echo -e "\n\n# ---------------CRIANDO AS CREDENCIAIS-----------------#"
 echo "[*] Criando uma credencial do tipo texto"
 source jenkins_api_create_credentials_by_xml_string.sh
 create_credentials_by_xml_string
-#echo "[*] Criando uma credencial do tipo usuário e senha"
-#source jenkins_api_create_credentials_by_xml_username_password.sh
-#create_credentials_by_xml_username_password
-#echo "[*] Criando uma credencial do tipo arquivo"
-#source jenkins_api_create_credentials_by_xml_filename.sh
-#create_credentials_by_xml_filename
-#echo "[*] Criando uma credencial do tipo chave privada ssh"
-#source jenkins_api_create_credentials_by_xml_basic_ssh_user_private_key.sh
-#create_credentials_by_xml_basic_ssh_user_private_key
+echo "[*] Criando uma credencial do tipo usuário e senha"
+source jenkins_api_create_credentials_by_xml_username_password.sh
+create_credentials_by_xml_username_password
+echo "[*] Criando uma credencial do tipo arquivo"
+source jenkins_api_create_credentials_by_xml_filename.sh
+create_credentials_by_xml_filename
+echo "[*] Criando uma credencial do tipo chave privada ssh"
+source jenkins_api_create_credentials_by_xml_basic_ssh_user_private_key.sh
+create_credentials_by_xml_basic_ssh_user_private_key
+
+echo -e "\n\n# ---------------ATUALIZAR CREDENCIAIS-----------------#"
+
+echo "[*] Atualizando a credencial do tipo texto"
+source jenkins_api_update_credentials_by_xml_string.sh
+update_credentials_by_xml_string
+echo "[*] Atualizando a credencial do tipo usuário e senha"
+source jenkins_api_update_credentials_by_xml_username_password.sh
+update_credentials_by_xml_username_password
+echo "[*] Atualizando a credencial do tipo arquivo"
+source jenkins_api_update_credentials_by_xml_filename.sh
+update_credentials_by_xml_filename
+echo "[*] Atualizando a credencial do tipo chave privada ssh"
+source jenkins_api_update_credentials_by_xml_basic_ssh_user_private_key.sh
+update_credentials_by_xml_basic_ssh_user_private_key
 #
-#echo -e "\n\n# ---------------ATUALIZAR CREDENCIAIS-----------------#"
-#
-#echo "[*] Atualizando a credencial do tipo texto"
-#source jenkins_api_update_credentials_by_xml_string.sh
-#update_credentials_by_xml_string
-#echo "[*] Atualizando a credencial do tipo usuário e senha"
-#source jenkins_api_update_credentials_by_xml_username_password.sh
-#update_credentials_by_xml_username_password
-#echo "[*] Atualizando a credencial do tipo arquivo"
-#source jenkins_api_update_credentials_by_xml_filename.sh
-#update_credentials_by_xml_filename
-#echo "[*] Atualizando a credencial do tipo chave privada ssh"
-#source jenkins_api_update_credentials_by_xml_basic_ssh_user_private_key.sh
-#update_credentials_by_xml_basic_ssh_user_private_key
-#
-#echo -e "\n\n# ---------------LISTAR CREDENCIAIS-----------------#"
-#
-#
-#echo "[*] Listando todas as credenciais cadastradas"
-#source jenkins_api_list_credentials.sh
-#list_credentials
-#
+echo -e "\n\n# ---------------LISTAR CREDENCIAIS-----------------#"
+
+
+echo "[*] Listando todas as credenciais cadastradas"
+source jenkins_api_list_credentials.sh
+list_credentials
+
 #echo -e "\n\n# ---------------OBTER CREDENCIAL GLOBAL-----------------#"
 #
 #echo "[*] Obtendo a credencial do tipo texto como xml"
@@ -81,22 +82,22 @@ create_credentials_by_xml_string
 #source jenkins_api_get_credentials_as_xml_basic_ssh_user_private_key.sh
 #get_credentials_as_xml_basic_ssh_user_private_key
 #echo "---"
-#
-#echo -e "\n\n# ---------------EXCLUIR CREDENCIAL GLOBAL-----------------#"
-#
-#echo "[*] Excluindo a credencial do tipo texto"
-#source jenkins_api_delete_credentials_string.sh
-#delete_credentials_string
-#echo "[*] Excluindo a credencial do tipo usuário e senha"
-#source jenkins_api_delete_credentials_username_password.sh
-#delete_credentials_username_password
-#echo "[*] Excluindo a credencial do tipo arquivo"
-#source jenkins_api_delete_credentials_filename.sh
-#delete_credentials_filename
-#echo "[*] Excluindo a credencial do tipo chave privada ssh"
-#source jenkins_api_delete_credentials_basic_ssh_user_private_key.sh
-#delete_credentials_basic_ssh_user_private_key
-#
+
+echo -e "\n\n# ---------------EXCLUIR CREDENCIAL GLOBAL-----------------#"
+
+echo "[*] Excluindo a credencial do tipo texto"
+source jenkins_api_delete_credentials_string.sh
+delete_credentials_string
+echo "[*] Excluindo a credencial do tipo usuário e senha"
+source jenkins_api_delete_credentials_username_password.sh
+delete_credentials_username_password
+echo "[*] Excluindo a credencial do tipo arquivo"
+source jenkins_api_delete_credentials_filename.sh
+delete_credentials_filename
+echo "[*] Excluindo a credencial do tipo chave privada ssh"
+source jenkins_api_delete_credentials_basic_ssh_user_private_key.sh
+delete_credentials_basic_ssh_user_private_key
+
 #echo "
 #######################################################################
 ## EXECUTANDO EXEMPLO PARA CRIAÇÂO DE CREDENCIAIS SOB PASTAS POR XML  #

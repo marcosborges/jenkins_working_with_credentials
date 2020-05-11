@@ -16,10 +16,9 @@ Vamos partir do ponto mais importante, credenciais foram feitas para serem secre
 
 Partindo deste ponto temos que utilizar todo processo e ferramentas que nos ajudem nesta missão.
 
-***"Marretar"*** usuário e senha, token de acesso a API no código da aplicação ou versionar chaves de SSH é uma prática ***não recomendada***. Pois mesmo se você correr agora para apaga-los com o histórico dos seus versionamentos podemos resgata-los.
+***"Marretar"*** usuário e senha, token de acesso a API no código da aplicação ou versionar chaves de SSH é uma prática ***não recomendada***. Pois mesmo se você correr agora para apaga-los com o histórico dos seus versionamentos podemos resgata-los. Quando falamos de credencial todo esforço para protege-la é válido.
 
 Credenciais devem ser armazenadas de criptografada e quando utilizadas não podem ser expostas ao usuário, o sistema de credenciais do Jenkins faz isso para você.
-
 
 ---
 
