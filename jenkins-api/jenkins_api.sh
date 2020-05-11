@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 export JENKINS_URL="http://localhost:8080"
 
 # NUNCA SALVE SUAS CREDENCIAIS EM ARQUIVOS VERSIONADOS NO GIT, 
@@ -10,14 +8,12 @@ export JENKINS_URL="http://localhost:8080"
 export JENKINS_USER_ID="marcos"
 export JENKINS_API_TOKEN="11a91767b5390bd10f078a981ed8fa6521"
 
-
 #(STORE=Provider::Resolver::ContextPath)
 export JENKINS_CREDENTIAL_NAME="TEST_API"
 export JENKINS_CREDENTIAL_FOLDER_NAME="folder"
 export JENKINS_CREDENTIAL_STORE="store/system/domain/_"
 export JENKINS_CREDENTIAL_FOLDER_STORE="store/${JENKINS_CREDENTIAL_FOLDER_NAME}/domain/_"
 export JENKINS_CREDENTIAL_DOMAIN="(global)"
-
 
 echo "
 ###################################################################
@@ -54,7 +50,7 @@ update_credentials_by_xml_filename
 echo "[*] Atualizando a credencial do tipo chave privada ssh"
 source jenkins_api_update_credentials_by_xml_basic_ssh_user_private_key.sh
 update_credentials_by_xml_basic_ssh_user_private_key
-#
+
 echo -e "\n\n# ---------------LISTAR CREDENCIAIS-----------------#"
 
 echo "[*] Listando todas as credenciais cadastradas"
