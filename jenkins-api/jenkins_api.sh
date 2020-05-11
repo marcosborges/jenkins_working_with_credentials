@@ -91,18 +91,18 @@ echo "[*] Excluindo a credencial do tipo chave privada ssh"
 source jenkins_api_delete_credentials_basic_ssh_user_private_key.sh
 delete_credentials_basic_ssh_user_private_key
 
-#echo "
+echo "
 #######################################################################
 ## EXECUTANDO EXEMPLO PARA CRIAÇÂO DE CREDENCIAIS SOB PASTAS POR XML  #
 #######################################################################
 #"
-#
-#echo -e "\n\n# ---------------CRIANDO PASTA-----------------#"
-#
-#echo "[*] Criando a pasta FOLDER_A"
-#source jenkins_api_create_folder.sh
-#create_folder
-#
+
+echo -e "\n\n# ---------------CRIANDO PASTA-----------------#"
+
+echo "[*] Criando a pasta FOLDER_A"
+source jenkins_api_create_folder.sh
+create_folder
+
 #echo -e "\n\n# --------CRIANDO CREDENCIAL SOB PASTA---------#"
 #
 #echo "[*] Criando a credencial do tipo texto na pasta FOLDER_A"
@@ -135,6 +135,6 @@ delete_credentials_basic_ssh_user_private_key
 #
 #echo -e "\n\n# --------------EXCLUINDO PASTA----------------#"
 #
-#echo "[*] Excluindo a pasta FOLDER_A"
-#source jenkins_api_delete_folder.sh
-#delete_folder
+echo "[*] Excluindo a pasta FOLDER_A"
+source jenkins_api_delete_folder.sh
+delete_folder
