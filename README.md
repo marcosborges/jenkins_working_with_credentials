@@ -8,6 +8,21 @@ O objetivo deste repositório é fornecer um compilado de todo meu conhecimento 
 
 ---
 
+## Porque utilizar as credenciais?
+
+Caso você esteja começando na área de Desenvolvimento ou DevSecOps acho que essa seria a primeira pergunta com relação a importancia deste conteúdo.
+
+Vamos partir do ponto mais importante, credenciais foram feitas para serem secretas.
+
+Partindo deste ponto temos que utilizar todo processo e ferramentas que nos ajudem nesta missão.
+
+***"Marretar"*** usuário e senha, token de acesso a API no código da aplicação ou versionar chaves de SSH é uma prática ***não recomendada***. Pois mesmo se você correr agora para apaga-los com o histórico dos seus versionamentos podemos resgata-los.
+
+Credenciais devem ser armazenadas de criptografada e quando utilizadas não podem ser expostas ao usuário, o sistema de credenciais do Jenkins faz isso para você.
+
+
+---
+
 ## Sobre os exemplos.
 
 Separei em 6 partes e estão ordenadas por onde comecei até como utilizo hoje na manutenção das credenciais:
